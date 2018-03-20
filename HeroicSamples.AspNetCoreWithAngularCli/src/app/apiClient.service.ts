@@ -9,7 +9,7 @@ export class ApiClient {
 
   private getUrl(url: string) {
     const trimmedUrl = url.startsWith('/') ? url.substring(1) : url;
-    return `${environment.apiUrl}/${url}`;
+    return `${environment.apiUrl}/${trimmedUrl}`;
   }
 
   public post<T>(
